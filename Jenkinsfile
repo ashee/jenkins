@@ -1,12 +1,21 @@
 pipeline {
-	agent any
+    agent any
 
-	stages {
-		stage('checkout')
-		checkout scm
-
-		stage('build')
-		sh 'echo hello,world'
-		
-	}
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building..'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+            }
+        }
+    }
 }
