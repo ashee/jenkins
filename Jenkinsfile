@@ -1,11 +1,9 @@
 pipeline {
-	node {
-		agent any
-		
-		stage('checkout')
-		checkout scm
+	agent any
 
-		stage('build')
-		sh 'echo hello,world'
-	}
+	stage('checkout')
+	checkout scm
+
+	stage('build')
+	sh 'echo hello,world'
 }
